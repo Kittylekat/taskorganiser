@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [@task, @comment] %> |
+<%= link_to 'Show', task_comments_path(@task, @comment) %> |
 <%= link_to 'Back', task_comments_path(@task) %>

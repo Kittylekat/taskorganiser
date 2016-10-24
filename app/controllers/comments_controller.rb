@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
+    #@comment = @task.comments.find(comment_params)
   end
 
   # GET /comments/new
