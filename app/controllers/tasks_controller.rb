@@ -5,6 +5,8 @@ class TasksController < ApplicationController
 
 	def show
 		@task = Task.find(params[:id])
+		#@comments = Comment.find(params[:id])
+		@comments = Comment.all
 	end
 
 	def new
@@ -22,7 +24,7 @@ class TasksController < ApplicationController
 			redirect_to @task
 		else
 			render 'new'
-		end	
+		end
 	end
 
 	def update
@@ -38,5 +40,5 @@ class TasksController < ApplicationController
 	private
 		def task_params
 			params.require(:task).permit(:title, :text)
-		end	
+		end
 end
