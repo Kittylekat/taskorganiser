@@ -7,6 +7,9 @@
   <strong>Text:</strong>
   <%= @task.text %>
 </p>
+
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Back', tasks_path %>
 <p>
   <table>
     <thead>
@@ -29,6 +32,7 @@
       <% end %>
     </tbody>
   </table>
+  <br>
+  Create a <%= link_to 'new comment', new_task_comment_path(@task) %>
+  </br>
 </p>
-<%= link_to 'Edit', edit_task_path(@task) %>
-<%= link_to 'Back', tasks_path %>
