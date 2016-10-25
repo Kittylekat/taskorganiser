@@ -1,5 +1,5 @@
 <%= form_for @task do |f| %>
- 
+
   <% if @task.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -13,19 +13,22 @@
       </ul>
     </div>
   <% end %>
- 
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
- 
+
   <p>
     <%= f.label :text %><br>
     <%= f.text_area :text %>
   </p>
- 
+  <p>
+    <%= f.label :timetable_id %><br>
+    <%= f.collection_select(:timetable_id, Timetable.all, :id, :id) %>
+  </p>
   <p>
     <%= f.submit %>
   </p>
- 
+
 <% end %>

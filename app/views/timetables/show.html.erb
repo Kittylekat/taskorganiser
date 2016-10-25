@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @timetable.task_id %>
+</p>
+
+<p>
+  <strong>Taskname:</strong>
+  <%= @timetable.taskname %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @timetable.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @timetable.enddate %>
+</p>
+
+<p>
+  <strong>Weekday:</strong>
+  <%= @timetable.weekday %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @timetable.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @timetable.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_timetable_path(@timetable) %> |
+<%= link_to 'Back', timetables_path %>

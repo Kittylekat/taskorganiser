@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024195606) do
+ActiveRecord::Schema.define(version: 20161025212119) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "task_id"
@@ -23,8 +23,21 @@ ActiveRecord::Schema.define(version: 20161024195606) do
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "timetable_id"
+  end
+
+  create_table "timetables", force: :cascade do |t|
+    t.integer  "task_id"
+    t.string   "taskname"
+    t.date     "startdate"
+    t.date     "enddate"
+    t.string   "weekday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "timetables", ["task_id"], name: "index_timetables_on_task_id"
 
 end

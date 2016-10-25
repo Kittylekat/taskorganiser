@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_id: 1
+  taskname: MyString
+  startdate: 2016-10-25
+  enddate: 2016-10-25
+  weekday: MyString
+  created_at: 2016-10-25 23:21:19
+  updated_at: 2016-10-25 23:21:19
+
+two:
+  task_id: 1
+  taskname: MyString
+  startdate: 2016-10-25
+  enddate: 2016-10-25
+  weekday: MyString
+  created_at: 2016-10-25 23:21:19
+  updated_at: 2016-10-25 23:21:19
