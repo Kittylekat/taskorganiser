@@ -1,9 +1,40 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   task_id: 1
-  content: MyString
+  content: Wow! Realy greate!
+  created_at: 2016-10-30
+  updated_at: 2016-10-30
 
 two:
+  id: 2
   task_id: 1
-  content: MyString
+  content: Nice one!
+  created_at: 2016-10-29
+  updated_at: 2016-10-30
+
+
+three:
+  id: 3
+  task_id: 2
+  content: =- First -=
+  created_at: 2016-10-30
+  updated_at: 2016-10-30
+
+
+four:
+  id: 4
+  task_id: 2
+  content: Greate
+  created_at: 2016-10-29
+  updated_at: 2016-11-01
+
+
+five:
+  id: 5
+  task_id: Omg....
+  content: Nice one!
+  created_at: 2016-10-30
+  updated_at: 2016-11-01
+

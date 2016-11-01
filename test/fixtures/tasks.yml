@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  text: MyText
+  id: 1
+  title: Test Task 1
+  text: At vero eos et accusam et justo
+  created_at: 2016-10-12
+  updated_at: 2016-10-24
 
 two:
-  title: MyString
-  text: MyText
+  id: 2
+  title: Test Task 2
+  text: tempor invidunt ut labore et dolore magna
+  created_at: 2016-10-29
+  updated_at: 2016-11-01
