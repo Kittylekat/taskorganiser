@@ -5,4 +5,5 @@ class Task < ActiveRecord::Base
     				length: { minimum: 5 }
 
 		has_many :comments
+		belongs_to :color
 end

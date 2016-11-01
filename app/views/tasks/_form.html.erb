@@ -24,6 +24,10 @@
     <%= f.text_area :text %>
   </p>
   <p>
+    Pick a color for your task<br>
+    <%= f.collection_select(:colors_id, Color.all, :id, :name) %>
+  </p>
+  <p>
     <%= f.label :timetable_id %><br>
     <%= f.collection_select(:timetable_id, Timetable.all, :id, :id) %>
   </p>

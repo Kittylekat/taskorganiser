@@ -1,8 +1,10 @@
 <p>
+  <%
+    color = Color.find(@task.colors_id)
+  %>
   <strong>Title:</strong>
-  <%= @task.title %>
+  <span class="label" style="background-color:<%= color.hex %>"><%= @task.id %></span> <%= @task.title %>
 </p>
-
 <p>
   <strong>Text:</strong>
   <%= @task.text %>
