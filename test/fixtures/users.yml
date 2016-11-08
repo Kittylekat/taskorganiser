@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  #name: MyString
+  name: First's Name
+  password_digest: <%= BCrypt::Password.create('SOA') %>
+
+two:
+  #name: MyString
+  name: Seconds's Name
+  password_digest: <%= BCrypt::Password.create('SOA') %>
+
+three:
+  #name: MyString
+  name: Aigner
+  password_digest: <%= BCrypt::Password.create('SOA') %>

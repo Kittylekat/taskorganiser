@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101220947) do
+ActiveRecord::Schema.define(version: 20161107141204) do
 
   create_table "colors", force: :cascade do |t|
     t.string   "name"
@@ -48,5 +48,12 @@ ActiveRecord::Schema.define(version: 20161101220947) do
   end
 
   add_index "timetables", ["task_id"], name: "index_timetables_on_task_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
 end

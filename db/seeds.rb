@@ -6,6 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.delete_all
+User.create(name: "Apparation", password: "SOA", password_confirmation: "SOA")
+
+Color.delete_all
+Task.delete_all
+Comment.delete_all
+
 Color.create(
     name: 'light-red',
     rgb: '251,111,111',
