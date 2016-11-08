@@ -75,3 +75,10 @@ Comment.create(
     created_at: Date.today-1,
     updated_at: Date.today-1)
 
+User.create(
+    surname: 'Mustermann',
+    givenname: 'Max',
+    email: 'max.mustermann@online.de',
+    password: 'Start123!',
+    password_confirmation: 'Start123!')
+
