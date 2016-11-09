@@ -1,3 +1,33 @@
+<head>
+
+</head>
+<body>
+<nav class="navbar navbar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Media Programming</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", welcome_index_path %></li>
+        <li><a href="welcome#about">About</a></li>
+        <li><a href="welcome#contact">Contact</a></li>
+        <li><%= link_to "Sign up", signup_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+          <li><%= link_to "Log out", logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+        <li><a href="welcome#help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <h1>Welcome#index</h1>
 <%= link_to 'All Tasks', controller: 'tasks' %>
+</body>
+
+
 
