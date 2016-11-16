@@ -1,6 +1,7 @@
 <p>
   <%
     color = Color.find(@task.colors_id)
+    # colors in controller implementieren, abfangen wenn color ist nil
   %>
   <strong>Title:</strong>
   <span class="label" style="background-color:<%= color.hex %>"><%= @task.id %></span> <%= @task.title %>
