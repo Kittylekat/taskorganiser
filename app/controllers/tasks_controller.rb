@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 	def index
 		@tasks = Task.all
+		@task = Task.new
 	end
 
 	def show
@@ -19,20 +20,28 @@ class TasksController < ApplicationController
 	def create
 		@task = Task.new(task_params)
 
-		if @task.save
-			redirect_to @task
-		else
-			render 'new'
-		end
+		respond_to do |format|
+      if @task.save
+        format.html { redirect_to @task, notice: 'Task was successfully created.' }
+        format.js   {}
+        format.json { render :show, status: :created, location: @task }
+      else
+        format.html { render :new }
+        format.json { render json: @task.errors, status: :unprocessable_entity }
+      end
+  		end
+
 	end
 
 	def update
 		@task = Task.find(params[:id])
 
-		if @task.update(task_params)
-			redirect_to @task
+		if @note.update(note_params)
+        	format.html { redirect_to @task, notice: 'Note was successfully updated.' }
+        	format.json { render :show, status: :ok, location: @task }
 		else
-			render 'edit'
+			format.html { render :edit }
+        	format.json { render json: @task.errors, status: :unprocessable_entity }
 		end
 	end
 
